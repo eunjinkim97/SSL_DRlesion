@@ -1,0 +1,21 @@
+defaults:
+  - _self_
+  - data_module: mnist.yaml
+  - lightning_module: mnist.yaml
+  - callbacks: default.yaml
+  - logger: null
+  - trainer: default.yaml
+  - paths: default.yaml
+  - hydra: default.yaml
+
+  - experiment: null
+  - debug: null
+
+project_name: mnist
+
+train: True
+test: True
+
+ckpt_path: null
+
+seed: null

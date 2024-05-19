@@ -1,0 +1,10 @@
+_target_: RiCo.code.data_module.DM
+unlabeled_tr: '/SSL_DRlesion/IDRiD'
+data_dir_tr: '/SSL_DRlesion/IDRiD'
+data_dir_te: '/SSL_DRlesion/IDRiD'
+batch_size: 1
+num_workers: 4
+num_cls: 4
+version: 'multi'
+sample_prop: 1.0
+patch_size: 512

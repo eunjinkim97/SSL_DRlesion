@@ -1,0 +1,33 @@
+# @package _global_
+
+project_name: 'RiCo'
+
+defaults:
+  - override /callbacks: default.yaml
+  - override /paths: default.yaml
+  - override /trainer: default.yaml
+  - override /logger: tensorboard.yaml
+  - override /data_module: train_ssl.yaml
+  - override /lightning_module: train_ssl.yaml
+
+
+seed: 43
+data_module:
+  version: 'Seed${seed}_ds${data_module.sample_prop}_unlabeled_cps_from_sup'
+
+lightning_module:
+  _target_: RiCo.code.train_cps.LM_CPS
+  net:
+    _target_: RiCo.code.models.Network_Dual
+    pretrained_path1: 'imagenet'
+    pretrained_path2: 'imagenet'
+    # pretrained_path1: '/None/logs/finding_2nd_upgrade/runs/RiCo/2024-05-19_09-43-39/Seed43_ds0.1_efficientnet-b3/checkpoints/epoch_137_vloss0.3595_vdice0.4504.ckpt'
+    # pretrained_path2: '/None/logs/finding_2nd_upgrade/runs/RiCo/2024-05-19_09-43-39/Seed43_ds0.1_efficientnet-b3/checkpoints/epoch_137_vloss0.3595_vdice0.4504.ckpt'
+    
+  cps_w: 1
+  sup_loss: 'w_ce+dice'
+  consistency_loss: 'wce'
+    
+logger:
+  tensorboard:
+    name: SEVER16_${data_module.version}

@@ -1,0 +1,16 @@
+_target_: RiCo.code.train_ours.LM
+net:
+  _target_: RiCo.code.models.Network_Dual_Diff
+  out_dim: ${data_module.num_cls}
+  version: ${data_module.version}
+  # pretrained_path1: 'imagenet' 
+  # pretrained_path2: 'imagenet'
+  # arch1: 'efficientnet-b3'
+  # arch2: 'efficientnet-b3'
+
+
+lr: 1e-4
+batch_size: ${data_module.batch_size}
+version: ${data_module.version}
+num_cls: ${data_module.num_cls}
+vis_test: 0

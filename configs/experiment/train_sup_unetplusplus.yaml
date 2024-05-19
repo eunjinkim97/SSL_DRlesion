@@ -1,0 +1,34 @@
+# @package _global_
+
+project_name: 'RiCo'
+
+defaults:
+  - override /callbacks: default.yaml
+  - override /paths: default.yaml
+  - override /trainer: default.yaml
+  - override /logger: tensorboard.yaml
+  - override /data_module: train_sup.yaml
+  - override /lightning_module: train_sup.yaml
+
+
+seed: 43
+callbacks:
+  model_checkpoint:
+    dirpath: ${paths.output_dir}/checkpoints
+    filename: 'epoch_{epoch:03d}_vloss{TotalLossval:.4f}_vdice{val/Dice_total:.4f}'
+    monitor: 'val/Dice_total' 
+
+data_module:
+  version: 'Seed${seed}_ds${data_module.sample_prop}_${lightning_module.net.arch}' 
+
+lightning_module:
+  _target_: RiCo.code.train_sup.LM
+  net:
+    _target_: RiCo.code.models.Network_UnetPP
+
+trainer:
+  log_every_n_steps: 1
+
+logger:
+  tensorboard:
+    name: SEVER16_${data_module.version}

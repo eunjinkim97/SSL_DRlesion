@@ -1,0 +1,11 @@
+_target_: RiCo.code.train_sup.HELM
+net:
+  _target_: RiCo.code.models.Network
+  out_dim: ${data_module.num_cls}
+  version: ${data_module.version}
+  pretrained_path: 'imagenet'
+  arch: 'efficientnet-b3'
+
+lr: 1e-4
+version: ${data_module.version}
+num_cls: ${data_module.num_cls}
