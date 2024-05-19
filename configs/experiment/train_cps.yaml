@@ -21,8 +21,8 @@ lightning_module:
     _target_: RiCo.code.models.Network_Dual
     pretrained_path1: 'imagenet'
     pretrained_path2: 'imagenet'
-    # pretrained_path1: '/None/logs/finding_2nd_upgrade/runs/RiCo/2024-05-19_09-43-39/Seed43_ds0.1_efficientnet-b3/checkpoints/epoch_137_vloss0.3595_vdice0.4504.ckpt'
-    # pretrained_path2: '/None/logs/finding_2nd_upgrade/runs/RiCo/2024-05-19_09-43-39/Seed43_ds0.1_efficientnet-b3/checkpoints/epoch_137_vloss0.3595_vdice0.4504.ckpt'
+    # pretrained_path1: '/None/logs/runs/RiCo/2024-05-19_09-43-39/Seed43_ds0.1_efficientnet-b3/checkpoints/epoch_137_vloss0.3595_vdice0.4504.ckpt'
+    # pretrained_path2: '/None/logs/runs/RiCo/2024-05-19_09-43-39/Seed43_ds0.1_efficientnet-b3/checkpoints/epoch_137_vloss0.3595_vdice0.4504.ckpt'
     
   cps_w: 1
   sup_loss: 'w_ce+dice'
