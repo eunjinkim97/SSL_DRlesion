@@ -12,7 +12,7 @@ Semi-supervised learning 	$\cdot$ Retinal image segmentation $\cdot$ Mutual lear
 
 ---------------------------------------
 
-This repository is the implementation to review RiCo Network for IDRiD Dataset.
+This repository is the implementation to train RiCo Network for IDRiD Dataset.
 
 ## 1. git clone
 ```
@@ -27,6 +27,8 @@ pip install -r requirements.txt
 ## 3. Dataset
 
 ### 3-1. Download the IDRiD Dataset in public.
+You can find Indian Diabetic Retinopathy Image Dataset (IDRiD) dataset information on [this website](https://idrid.grand-challenge.org/).  
+Link to access dataset: [Link](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)
 
 ### 3-2. Preprocess the IDRiD Dataset.
 ```
@@ -60,6 +62,9 @@ PYTHONPATH='.' bash train_script.sh -c 2 -m mcf -t 43 -s 0.1
 PYTHONPATH='.' bash train_script.sh -c 2 -m cps -t 43 -s 0.1
 PYTHONPATH='.' bash train_script.sh -c 3 -m cld -t 43 -s 0.1
 PYTHONPATH='.' bash train_script.sh -c 3 -m uamt -t 43 -s 0.1
-``` 
+```
+
+---------------------------------------
+If you have any question, you can contact to me ([Eunjin Kim](dmswlskim970606@gmail.com)).
 
 
