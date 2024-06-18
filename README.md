@@ -27,11 +27,11 @@ configs/data_module/train_sup.yaml
 ## 4. Train models.
 
 ### 4-1. Train supervised models
-c : gpu device id
-m : method
-t : seed tag
-s : sampling proportion
-Below commends are for 10% dataset and seed 43. 
+c : gpu device id  
+m : method  
+t : seed tag  
+s : sampling proportion  
+Below commends are for 10% dataset and seed 43.   
 ```
 PYTHONPATH='.' bash train_script.sh -c 0 -m sup_unet -t 43 -s 0.1
 PYTHONPATH='.' bash train_script.sh -c 1 -m sup_unetplusplus -t 43 -s 0.1
