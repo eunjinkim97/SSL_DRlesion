@@ -2,8 +2,7 @@
 
 This repository is the implementation to review RiCo Network for IDRiD Dataset.
 
-![main_figure](<img width="787" alt="image" src="./main_figure.png">)
-
+![Github_Logo](./main_figure.png)  
 
 ## 1. git clone
 ```
