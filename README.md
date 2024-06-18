@@ -2,6 +2,9 @@
 
 This repository is the implementation to review RiCo Network for IDRiD Dataset.
 
+![main_figure](<img width="787" alt="image" src="https://github.com/eunjinkim97/SSL_DRlesion/assets/129014507/addd7904-520a-4a5a-a0b4-495cb700d992">)
+
+
 ## 1. git clone
 ```
 git clone https://github.com/eunjinkim97/SSL_DRlesion.git
